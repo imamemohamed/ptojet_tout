@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+}
+
+nav ul::after{
+    content: "";/*il aura rien apres (non collapse)*/
+    display: table;
+    clear: both;
+}
+
+nav li{
+    float: left;
+    width: 16%;/*25% car on a 4 élément : donc 100/4 = 25*/
+    text-align: center;
+}
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;/*rester fise */
+    top: 0px;/*pour que notre menu reste en haut*/
+}
+
+nav a{
+    display: block;
+    text-decoration: none;/*profitons-en d’enlever les soukignements*/
+    padding: 19px 0px;/*aérer attendu*/
+}
+
+nav a:hover{
+    color: rgb(13, 2, 2);
+}
+
+.div2{
+    position: relative;
+    left: 150px;  
+}
+
+
+section{
+    width: 100%;
+    min-height: 150px;/*hauteur minimal*/
+    padding-bottom: 10px;/* afin d'avoir un petit ecart*/ /*padding bas de chaque section*/
+    margin-bottom: 10px;/* afin d'avoir un ecrt entre les section*/
+    padding: 19px 0px;/*aérer attendu*/
+}
+
+.sec{
+    margin: 0px 10%;/* le 10 de marge en % signifie 10% à de marge droit et 10% à de marge gauche
+                     * à chaque contenue de nos sections*/
+}
+
+/*on va floater les div right à droit et left à gauche avec des taille #
+ *et chacun des contenus doit etre cote à cote que son correspondance*/
+.left{
+    float: left;
+    width: 30%;
+}
+.right{
+    float: left;
+    width: 60%;
+}
+
+.oui{
+    width: 30%;
+    border: 2px solid black;
+    height: 70px;
+    /*background-color: blue;*/
+    padding-top: 20px;
+   }
+   .non{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-left: 40%;
+    padding: 10px;
+   }
+
+    @media screen and (max-width: 1400px){
+      .non{
+       width: 120px;
+       margin-left: 20%;
+      }
+    }  
+      @media screen and (max-width: 780px){
+      .oui{
+       width: 70px;
+      }
+
+      .div2{
+        position: relative;
+        left: 30px;        
+    }
+    /*pour le truc débordé*/
+    .left{
+        position: relative;
+        left: -35px;
+    }
+    nav li{
+        font-size: 11px;
+        padding-right: 25px;
+        font-weight: bold;
+    }
+    .non{
+        font-size: 13px;
+       }
+       
+       /*pour zut1*/
+       .zut1{
+        width: 30%;
+       }
+       h1, h2, h3, h4, h5{
+        font-size: 10px;
+        font-weight: bold;
+       }
+
+       p{
+        font-size: 10px;
+       }
+    
+    }
+
+/*pour les div d'au milieu*/
+
+
+
+/*premiere partie*/
+.zut, .div3sur4{
+    background-color: rgb(198, 197, 195);
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+}
+
+.zut1{
+    width: 20%;
+    margin: 90px 10%;
+}
+
+.zut1 >p{
+    padding: 20px 0px;
+}
+.zut2{
+    width: 50%;
+    margin-left: 12%;
+}
+
+/*pour tout les div centrer*/
+.center1, .center3{
+    margin: 50px auto; /*centrer et donner un margin haut et bas de 50*/
+    width: 40%;
+    text-align: center;
+} 
+
+/*div3 contient les icones*/
+.troispetit1, .div3, .troispetit2{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0px;
+}
+
+.image1 >p{
+    padding: 20px 0px;
+}
+
+/*on donne 30% pour chaque div d'icone*/
+
+.div31{
+    width: 20%;
+    margin: 30px 10%;
+    text-align: center;
+}
+
+/*pour les trois image*/
+.image1{
+    width: 30%;
+    /*margin: 0px 2%;*/
+    text-align: center;
+}
+/*pour le a vert des site*/
+
+h4 a{
+    text-decoration: none;
+    padding: 3px;
+    border: 2px solid purple;
+}
+
+h4 a:hover{
+    background-color: rgba(174, 163, 155, 0.8);
+}
+/*pour le footer*/
+
+footer{
+    display: flex;
+    background-color: #000000f6;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;/*afin de le separer avec le haut*/
+    
+}
+h5{
+    padding-bottom: 10px;
+}
+
+.footer1{
+    width: 40%;
+    margin: 0px 10%; /*afin d'aerer les div de dedans*/
+}
+
+.footer2{
+    width: 10%;
+}
+
+.fin{
+    background-color: #000000f6;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.tire1{
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/*pour le contenu de tire 1 à faire deborder*/
+
+.titre{
+    padding-top: 5px;
+    margin-left: 19px; /*deplacer le contenu(div titre vers la sortie*/
+    width: 50px;
+}
+
+/*je vais remplacer par des icone*/
+.div31 >img{
+    width: 90%;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+/*sur about
+    je donne la meme couleur que le debut */
+.im{
+    width: 30%;
+}
+
+.im1{
+    width: 50%;
+    padding-top: 20px;
+}
+
+/*donner des espaces entre les p de about us*/
+.im1 > p{
+    padding: 20px 0px;
+}
+
+/*pour le div de couleur violet meat nanan*/
+.cent{
+    width: 100%;
+    min-height: 100px;
+    background-color: #8b0b8495;
+    text-align: center;
+    margin: 70px 0px;
+    padding-top: 50px;
+    color: white;
+}
+
+.divi3sur4::after{
+    content: "";/*il aura rien apres (non collapse)*/
+    display: table;
+    clear: both;
+}
